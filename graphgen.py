@@ -8,8 +8,31 @@ import numpy as np
 from matplotlib.pyplot import cm
 import math
 
+  from pandas import read_csv
+from pandas import DataFrame
+from statistics import mean
+import pandas as pd
+from statistics import mean
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib.pyplot import cm
+import math
+
+
 
 #getting AND storing the data
+data=read_csv("records1.csv").values.tolist()
+counter=0
+try:
+    for i in range(len(data)):
+        data[i][17]=counter
+
+        if data[i][16]==3 and data[i+1][16]==0:
+            counter=counter+1
+            print(counter)
+except:
+    print("Exception occur")
+    #getting AND storing the data
 data=read_csv("records1.csv").values.tolist()
 counter=0
 try:
